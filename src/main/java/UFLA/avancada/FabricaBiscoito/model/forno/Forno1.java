@@ -7,11 +7,13 @@ public class Forno1 implements Forno{
     private boolean ocupado = false;
 
     public void assar(Biscoito biscoito) {
+        setOcupado(true);
         if(biscoito.getEhRecheado()) {
-            long time = (long) (1000 * 1.2 * biscoito.calcularIngredientes());
+            long time = (long) (100 * 1.2 * biscoito.calcularIngredientes());
             try {
                 Thread.sleep(time);
                 setOcupado(false);
+                System.out.println("Biscoito pronto forno1");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -20,6 +22,7 @@ public class Forno1 implements Forno{
             try {
                 Thread.sleep(time);
                 setOcupado(false);
+                System.out.println("Biscoito pronto forno1");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

@@ -6,9 +6,10 @@ public class Forno2 implements Forno{
 
     public void assar(Biscoito biscoito) {
         if(biscoito.getEhRecheado()) {
-            long time = (long) (1000 * 1.2 * biscoito.calcularIngredientes());
+            long time = (long) (100 * 1.2 * biscoito.calcularIngredientes());
             try {
                 Thread.sleep(time);
+                System.out.println("Biscoito pronto forno 2");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -16,6 +17,7 @@ public class Forno2 implements Forno{
             long time = 100 * biscoito.calcularIngredientes();
             try {
                 Thread.sleep(time);
+                System.out.println("Biscoito pronto forno 2");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

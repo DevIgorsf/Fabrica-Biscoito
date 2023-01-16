@@ -2,14 +2,12 @@ package UFLA.avancada.FabricaBiscoito.model.fila;
 
 import UFLA.avancada.FabricaBiscoito.model.biscoito.Biscoito;
 import UFLA.avancada.FabricaBiscoito.model.linha.Linha;
-import lombok.Getter;
 
 import java.util.List;
-import java.util.Vector;
 
 public interface Fila extends Runnable {
 
-    Biscoito getBiscoitoLista();
+    List<Biscoito> getBiscoitoLista();
 
     int getBiscoitoListaSize();
 
@@ -20,5 +18,7 @@ public interface Fila extends Runnable {
     Linha getLinha();
 
     public void run();
+
+    public int getTamanho();
 
 }

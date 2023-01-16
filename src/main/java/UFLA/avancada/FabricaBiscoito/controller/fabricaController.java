@@ -19,4 +19,9 @@ public class fabricaController {
     public ResponseEntity<BiscoitoDTO> fabricaBiscoito (@RequestBody DadosBiscoito dadosBiscoito) {
         return ResponseEntity.status(HttpStatus.CREATED).body(fabricaService.fabricaBiscoito(dadosBiscoito));
     }
+
+    @GetMapping
+    public ResponseEntity<String> getDadosfabricaBiscoito () {
+        return ResponseEntity.status(HttpStatus.OK).body(fabricaService.getDadosfabricaBiscoito());
+    }
 }

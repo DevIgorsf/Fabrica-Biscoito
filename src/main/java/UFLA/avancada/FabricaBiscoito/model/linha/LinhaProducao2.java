@@ -1,10 +1,14 @@
 package UFLA.avancada.FabricaBiscoito.model.linha;
 
 import UFLA.avancada.FabricaBiscoito.model.forno.Forno;
+import UFLA.avancada.FabricaBiscoito.model.biscoito.Biscoito;
 import UFLA.avancada.FabricaBiscoito.model.forno.Forno1;
 import UFLA.avancada.FabricaBiscoito.model.forno.Forno2;
-import UFLA.avancada.FabricaBiscoito.model.biscoito.Biscoito;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
+@NoArgsConstructor
 public class LinhaProducao2 implements Linha{
     private Biscoito biscoito;
     private Forno1 forno1;
@@ -13,7 +17,7 @@ public class LinhaProducao2 implements Linha{
     public void montar() {
         try {
             System.out.println("Processando biscoito linha 2");
-            Thread.sleep(5000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
