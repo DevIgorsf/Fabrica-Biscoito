@@ -28,6 +28,7 @@ public class FilaProducao3 implements Fila {
             synchronized (this.forno) {
                 System.out.println("Assando biscoito forno 2");
                 forno.assar(biscoitoLista.remove(0));
+                biscoitoPronto();
 
             }
         }
@@ -61,5 +62,9 @@ public class FilaProducao3 implements Fila {
 
     public int getTamanho() {
         return this.tamanho;
+    }
+
+    public void biscoitoPronto() {
+        this.tamanho--;
     }
 }

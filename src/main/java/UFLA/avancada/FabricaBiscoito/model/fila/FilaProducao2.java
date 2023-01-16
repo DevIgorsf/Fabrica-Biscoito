@@ -32,11 +32,13 @@ public class FilaProducao2 implements Runnable, Fila {
                 synchronized (this.forno1) {
                     System.out.println("Assando biscoito forno 1");
                     forno1.assar(biscoitoLista.remove(0));
+                    biscoitoPronto();
                 }
             } else {
                 synchronized (this.forno2) {
                     System.out.println("Assando biscoito forno 2");
                     forno2.assar(biscoitoLista.remove(0));
+                    biscoitoPronto();
                 }
             }
         }

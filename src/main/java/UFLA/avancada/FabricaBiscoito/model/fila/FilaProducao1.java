@@ -28,7 +28,7 @@ public class FilaProducao1 implements Runnable, Fila {
             synchronized (this.forno) {
                 System.out.println("Assando biscoito forno 1");
                 forno.assar(biscoitoLista.remove(0));
-
+                biscoitoPronto();
             }
         }
     }
@@ -60,5 +60,9 @@ public class FilaProducao1 implements Runnable, Fila {
 
     public int getTamanho() {
         return this.tamanho;
+    }
+
+    public void biscoitoPronto() {
+        this.tamanho--;
     }
 }

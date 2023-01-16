@@ -17,8 +17,10 @@ public interface Fila extends Runnable {
 
     Linha getLinha();
 
-    public void run();
+    void run();
 
-    public int getTamanho();
+    int getTamanho();
+
+    void biscoitoPronto();
 
 }
